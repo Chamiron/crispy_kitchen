@@ -1,0 +1,22 @@
+name: Hello Goodbye Workflow
+on:
+  push:
+    branches:
+      - main  # Change this to your desired branch
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3      
+      - name: Run Hello World
+        run: |
+          echo "Hello, World!"
+  goodbye:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Run Goodbye
+        run: |
+          echo "Goodbye!"
